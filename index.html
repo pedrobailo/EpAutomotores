@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilos/styles.css">
+    <title>EP AUTOMOTORES</title> 
+</head>
+<body>
+    <img class="imagen-portada" src="./img/banner-portada.jpg" alt="">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">EP AUTOMOTORES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Nuestros Vehiculos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Contacto
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Instagram</a></li>
+                    <li><a class="dropdown-item" href="#">Facebook</a></li>
+                    <li><a class="dropdown-item" href="#">Whatsapp</a></li>
+                    </ul>
+                </li>
+                </ul>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+                
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <h1 id="titulo-carrito">Compra Online</h1> 
+        <!-- MODAL DEL CARRITO -->
+        <button id="btnOpenModal"><h2>VER CARRITO</h2></button> 
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="btnCloseModal">&times;</span>
+                <div>
+                    <ul id="cartItemsModal"></ul>
+                    <div id="cartTotal"></div>
+                    <div id="cartEmpty"></div>
+                    <button id="btnVaciarCarrito">Vaciar Carrito</button>
+                    <a href="./sections/finalizarCompra.html"><button id="btnFinalizarCompra">Finalizar Compra</button></a>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Productos -->
+        <div id="cart-container" class="contenedor">
+            <div>
+                <img src="img/peugeot-308.jpg" alt="peugeot-308">
+                <div class="informacion">
+                    <p>Peugeot 308</p>
+                    <p class="precio">$3.500.000</p>
+                    <button class="agregar-carrito" data-producto-index="0">Comprar</button>
+                </div>
+            </div>
+            <div>
+                <img src="img/fiesta-kinetic.jpg" alt="fiesta-kinetic">
+                <div class="informacion">
+                    <p>Ford Fiesta Kinetic</p>                   
+                    <p class="precio">$3.200.000</p>
+                    <button class="agregar-carrito" data-producto-index="1">Comprar</button>
+                </div>
+            </div>
+            <div>
+                <img src="img/honda-fit.jpg" alt="honda-fit">
+                <div class="informacion">
+                    <p>Honda Fit</p>                   
+                    <p class="precio">$4.150.000</p>
+                    <button class="agregar-carrito" data-producto-index="2">Comprar</button>
+                </div>
+            </div>
+            <div>
+                <img src="img/hilux.jpg" alt="toyota-hilux">
+                <div class="informacion">
+                    <p>Toyota Hilux 2018</p>                   
+                    <p class="precio">$15.000.000</p>
+                    <button class="agregar-carrito" data-producto-index="3">Comprar</button>
+                </div>
+            </div>
+            <div>
+                <img src="img/gol-trend.jpg" alt="gol-trend">
+                <div class="informacion">
+                    <p>volkswagen Gol Trend</p>                   
+                    <p class="precio">$3.750.000</p>
+                    <button class="agregar-carrito" data-producto-index="4">Comprar</button>
+                </div>
+            </div>
+            <div>
+                <img src="img/bmwi3.jpg" alt="bmw-i3">
+                <div class="informacion">
+                    <p>BMW 1181 SPORT</p>                   
+                    <p class="precio">$12.000.000</p>
+                    <button class="agregar-carrito" data-producto-index="5">Comprar</button>
+                </div>
+            </div>
+            <div>
+                <img src="img/Focus.jpg" alt="Ford-focus">
+                <div class="informacion">
+                    <p>Ford Focus</p>                   
+                    <p class="precio">$6.350.000</p>
+                    <button class="agregar-carrito" data-producto-index="6">Comprar</button>
+                </div>
+            </div>
+            <div>
+                <img src="img/Screenshot_20230628_105801.jpg" alt="honda-civic">
+                <div class="informacion">
+                    <p>Honda Civic</p>                   
+                    <p class="precio">$7.800.000</p>
+                    <button class="agregar-carrito" data-producto-index="7">Comprar</button>
+                </div>
+            </div>
+        </div>
+    
+
+    </section>
+
+<footer>
+<!-- footer aqui -->
+</footer>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
